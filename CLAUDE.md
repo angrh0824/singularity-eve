@@ -1,8 +1,12 @@
-# AI yyyy
+# SINGULARITY EVE
 
 ブラウザで遊べる分岐型アドベンチャー。2025〜2040年のAI開発競争を舞台に、3人の主人公（米国のAI企業CEO、中国のAI企業CEO、米国の大統領補佐官）の選択で世界の結末が分かれる。Detroit: Become Human の形式を、AI 2027・AI 2040 などの未来予測シナリオに当てはめたもの。
 
+タイトルは「SINGULARITY EVE」（シンギュラリティ・イブ、超知能が生まれる前夜の物語）。日本語の副題は付けない。旧仮題「AI yyyy」の「yyyy」は、最終章（第32章）の名前として残している。
+
 ## 資料
+
+- 公開ページ：https://angrh0824.github.io/singularity-eve/ （リポジトリ：https://github.com/angrh0824/singularity-eve）
 
 - 企画書（Claude Docs）：https://claude.ai/artifact/7DKLKMQvALgQ9rcmwkkAAe
   章立て（5幕・32章）、結末一覧（世界の結末19通り＋主人公の結末13通り）、分岐の仕組みは企画書が正。
@@ -37,7 +41,7 @@
 - `npm install` → `npm run dev`（http://localhost:5173）→ `npm run build`（`dist/` に出力）
 - 今の2D版は、土台が動くかを確かめる仮の部屋だけ（`src/scenes/TestRoomScene.js`）。
 - 体験版は `public/` に置いてあるので、ビルドでそのまま `dist/prototype/` にコピーされる。
-  開発用のURLパラメータ：`?truth=deceptive` / `?truth=honest`（AIの本心を固定）、`?debug`（`window.__aiyyyy` で状態を見る）。
+  開発用のURLパラメータ：`?truth=deceptive` / `?truth=honest`（AIの本心を固定）、`?debug`（`window.__singularityEve` で状態を見る）。
 - 体験版のアーティファクトを更新するときは、`committee-night.html` から doctype・html・head・body の行と charset・viewport の meta を取り除いたものを公開する。
 
 ## 進め方の約束

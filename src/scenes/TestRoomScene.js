@@ -24,7 +24,7 @@ export class TestRoomScene extends Phaser.Scene {
     this.player = this.add.image(0, 0, 'player');
     this.placePlayer();
 
-    this.add.text(48, 44, 'AI yyyy', { fontFamily: 'monospace', fontSize: '28px', color: '#e8e4da' });
+    this.add.text(48, 44, 'SINGULARITY EVE', { fontFamily: 'monospace', fontSize: '28px', color: '#e8e4da' });
     this.add.text(48, 82, '開発中：矢印キーかWASDで歩けます', { fontSize: '16px', color: '#8c95a9' });
 
     this.keys = this.input.keyboard.addKeys('UP,DOWN,LEFT,RIGHT,W,A,S,D');

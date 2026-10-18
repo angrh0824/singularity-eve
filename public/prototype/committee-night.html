@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>AI yyyy 監督委員会の夜</title>
+<title>SINGULARITY EVE 監督委員会の夜</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -244,7 +244,7 @@ a{color:var(--halcyon)}
 <section id="scr-title" class="screen scroll">
   <div class="title-in gutter">
     <div class="title-main">
-      <p class="wordmark">AI <span>yyyy</span></p>
+      <p class="wordmark">SINGULARITY <span>EVE</span></p>
       <p class="kicker">体験版</p>
       <h1 class="title-h"><span class="nb">監督委員会の</span><span class="nb">夜</span></h1>
       <p class="dateline">2027年10月14日 21:00　サンフランシスコ</p>
@@ -293,7 +293,7 @@ a{color:var(--halcyon)}
 <section id="scr-game" class="screen game" hidden>
   <header class="hud gutter">
     <div class="hud-row">
-      <div class="hud-chapter"><b>AI <span>yyyy</span></b>　監督委員会の夜</div>
+      <div class="hud-chapter"><b>SINGULARITY <span>EVE</span></b>　監督委員会の夜</div>
       <div class="hud-place" id="hud-place"></div>
       <button type="button" class="hud-btn" id="btn-gloss">人物・用語</button>
       <div class="hud-clock"><div id="hud-time">21:00</div><div id="hud-left">開会まで 5:00</div></div>
@@ -432,7 +432,7 @@ const NODES = {
 };
 
 /* ================= per-viewer storage (discovered nodes, timer setting) ================= */
-const KEY = 'aiyyyy.ch07.v1';
+const KEY = 'singularity-eve.committee.v1';
 let store = {};
 try { store = JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) { store = {}; }
 const found = new Set(Array.isArray(store.found) ? store.found : []);
@@ -440,10 +440,10 @@ function save() { try { store.found = [...found]; localStorage.setItem(KEY, JSON
 
 /* ================= state ================= */
 let S = null;
-// 開発用：?truth=deceptive / ?truth=honest でヴェスパーの本性を固定、?debug で window.__aiyyyy から状態を見られる
+// 開発用：?truth=deceptive / ?truth=honest でヴェスパーの本性を固定、?debug で window.__singularityEve から状態を見られる
 const QS = new URLSearchParams(location.search);
 const FORCE_TRUTH = ['deceptive', 'honest'].includes(QS.get('truth')) ? QS.get('truth') : null;
-if (QS.has('debug')) window.__aiyyyy = { get state() { return S; } };
+if (QS.has('debug')) window.__singularityEve = { get state() { return S; } };
 function fresh() {
   return {
     clock: NIGHT0, pend: 0,
